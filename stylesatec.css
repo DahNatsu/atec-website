@@ -1,0 +1,175 @@
+:root {
+  --background-color:#003A51;
+  --border-color : rgb(255,255,255,0.1);
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* removing all padding from the page :) */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* adding a header with a color : 
+#header {
+    background-color: #003A51;
+}*/
+
+/* we use flex along side width 100 because it is in a single dimention */
+#header {
+    display:flex ;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-image: url(pic/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Style the search box inside the navigation bar 
+#header input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}*/
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #2c2a548f;
+    background-image: linear-gradient(to left, #003A51,#006C78);
+    overflow: hidden;
+    list-style-type: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, a, p, span {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: white;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--highlight-color);
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav .nav-section {
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1rem;
+  border-left: 1px solid var(--border-color);
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-mobile-section {
+  display: flex;
+  flex-basis: calc(100% * (2 / 3));
+  z-index: 2;
+}
+
+
+#nav-toggle-button > span,
+#nav-toggle-button > i { 
+  display: inline-block;
+  height: 1rem;
+  line-height: 1rem;
+}
+#nav-contact-section {
+  flex-grow: 1;
+}
+
+#nav-link-section {
+  flex-basis: 100%;
+  gap: 3rem; 
+}
+
+main {
+  flex-grow: 1;
+}
+
+main > article {
+  display: grid;
+  height: 100%;
+  grid-template-columns:1fr 1fr ;
+  grid-template-rows:1fr 1fr;
+}
+
+main > article > .article-section {
+  height: 100%;
+}
+
+main > article > .article-description-section,
+main > article > .article-nav-section {
+  border-left: 1px solid var(--border-color);
+}
+
+main > article > .article-title-section,
+main > article > .article-nav-section {
+  border-top:1px solid var(--border-color) ;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+}
+
+.carousel img {
+  width: 45%;
+  transition: all 0.5s ease-in-out;
+  display: none;  /* hide the images by default */
+}
+
+.carousel img.current {  /* show the current slide */
+  display: block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}

@@ -1,0 +1,7 @@
+rgb(4,12,28) background color
+
+#050a18 grad top nav
+
+#050a1867 grad top nav
+
+#050a18 header bg color
