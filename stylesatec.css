@@ -134,23 +134,34 @@ main > article > .article-nav-section {
   border-top:1px solid var(--border-color) ;
 }
 
-.carousel {
+/*---- carousel css ----*/
+
+.image-track {  
   display: flex;
+  gap: 2vmin;
+  position: absolute;
+  left: 2%; top: 50%; transform: translate(0%, -50%);
+  user-select: none;
   overflow: hidden;
-  position: relative;
-  justify-content: center;
 }
 
-.carousel img {
+.image-track > .carousel-img {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
+/* .image-track img {
   width: 45%;
   transition: all 0.5s ease-in-out;
-  display: none;  /* hide the images by default */
+  display: none;  hide the images by default
 }
 
-.carousel img.current {  /* show the current slide */
+.image-track img.current {  show the current slide
   display: block;
-}
-
+} */
+ 
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -173,3 +184,6 @@ main > article > .article-nav-section {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+
+
+/*----sliding image css ----*/
